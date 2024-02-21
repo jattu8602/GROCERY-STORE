@@ -34,10 +34,51 @@ html{
     scroll-padding-top: 7rem;
 
 }
+/* css code for banner */
+section{
+    padding: 2rem 9%;
+
+
+}
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+}
+
+.heading span{
+    background-color: var(--green);
+    color: #fff;
+    display: inline-block;
+    padding: 3rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+
+}
 
 body{
 background: #eee ;
 
+}
+
+.btn{
+    border: .2px solid var(--black);
+     margin: 1rem;
+    display: inline-block;
+    padding: .8rem; 
+    font-size: 1.7rem;
+    border-radius: .5rem ;
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+
+
+
+}
+.btn:hover{
+    background-color: var(--green);
+    color: #fff;
 }
 .header{
     border: 0px solid;
@@ -105,6 +146,11 @@ background: #eee ;
     display: none;
 
 }
+
+.header .navbar.active{
+    right : 2rem;
+    transition: .4s linear;
+}
 .header .search-form{
     border: 0px solid;
     position: absolute;
@@ -140,11 +186,6 @@ background: #eee ;
     font-size: 1.6rem;
     color: var(--black);
     padding: 0 1.5rem;
-
-
-
-
-
 }
 .header .search-form label{
     font-size: 2.2rem;
@@ -160,18 +201,22 @@ background: #eee ;
 .header .shopping-cart{
     border: 1px solid;
     position: absolute;
-    top: 100%;
-    right: 2rem;
+    top: 110%;
+    right: -110%;
     padding: 1rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    width:30rem;
+    width:35rem;
     background-color: #fff;
 
 }
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .4s linear;
+}
 .header .shopping-cart .box
 {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     align-items: center;
     gap:1rem;
@@ -184,9 +229,222 @@ background: #eee ;
     height:10rem;
 
 
+
 }
 .header .shopping-cart .box .fa-trash{
     font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--light-color);
+    transform: translateY(  -50%);
+}
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--green);
+}
+.header .shopping-cart .box .content h3{
+    color: var(--black);
+    font-size: 1.7rem ;
+    padding-bottom: 1rem;
+
+}
+.header .shopping-cart .box .content span{
+    color: var(--light-color);
+    font-size: 1.6rem ;
+    
+
+}
+.header .shopping-cart .box .content .quantity{
+    padding-left: 1rem;
+
+
+}
+.header .shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+
+}
+.header .shopping-cart .btn{
+    display: block;
+    text-align:center ;
+    margin: 1rem 0;
+
+}
+.header .login-form{
+    width: 30rem;
+    border: 0px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem ;
+    background-color: #fff;
+    text-align: center;
+
+}
+.header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+
+}
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+
+}
+.header .login-form .box{
+    width: 100%;
+    border: 0px solid;
+    margin: .7rem 0;
+    background-color: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+
+
+}
+.header .login-form p{
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+
+}
+.header .login-form p a{
+    
+    color: var(--green);
+    text-decoration: underline;
+
+
+
+
+}
+/* for fruits image in shop section */
+.home{
+    /* border: 0px solid; */
+    display: flex;
+    justify-content: center;
+    background: url(../image/banner-img.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+
+
+
+
+
+}
+.home .content{
+    /* border: 1px solid; */
+    text-align: center;
+    width: 60rem;
+
+}
+.home .content h3{
+    color: var(--black);
+    font-size: 4rem;
+}
+.home .content h3 span{
+    color: var(--green);
+}
+.home .content p{
+    color: var(--light-color);
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queires */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+        
+    
+    }
+    .header{
+        padding: 2rem;
+
+    }
+    section{
+        padding:2rem ;
+    }
+}
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+
+    }
+    .header .search-form{
+        width: 90%;
+
+
+
+
+        
+    }
+    
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+
+    }
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+
+
+    }
+
+    
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+        
+    
+    }
+    .heading{
+        font-size: 2.5rem;
+    }
+
 }
 
 
