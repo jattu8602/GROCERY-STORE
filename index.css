@@ -126,7 +126,7 @@ background: #eee ;
 {
     right: 2rem;
     transition: .4s linear;
-    
+
 
 }
 
@@ -156,3 +156,94 @@ background: #eee ;
 .header .search-form label:hover{
     color: var(--green);
 }
+
+.header .shopping-cart{
+    border: 1px solid;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:30rem;
+    background-color: #fff;
+
+}
+.header .shopping-cart .box
+{
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+
+
+}
+.header .shopping-cart .box img{
+    height:10rem;
+
+
+}
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
